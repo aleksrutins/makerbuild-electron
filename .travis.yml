@@ -3,6 +3,12 @@ node_js:
 - stable
 - '6'
 - '4'
+before_script:
+  - npm install
+script:
+  - npm run dist
+  - tar -cvf makerbuild-electron.tar .
+  - gzip makerbuild-electron.tar
 deploy:
   provider: releases
   api_key:
