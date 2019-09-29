@@ -22,7 +22,7 @@ deploy:
   password:
     secure: C6r+0a1C+uY8gxCL5Ruz5MHMJDIZxl/o9Ods4w6NvNArUB5O+JqZQuQG+6SSEwgl3H94x2l2TiZe+lAuRWmYtujzIudBRxhSZ8U9cdBbBp1I73jfMZZT5WBaQ4GvORESVxv+CSb4T/zqeJUzA9Ds6O8jH59DqiN37yiE25jS5Uc3donLjufTTLlylwUzuW3WIs74p/Sn1RjxWMy2OzRq9ELuQrz3F7LbCgd5ZyQzodQ3ft7lprCeLcw7etUObx2qE6wz9w17HRJ7sQVod65qI9Fq7WRjgPk7keY8YES4Tdni/7AJXnvnl7eqT9STfXZEvapFPdmXGjnE95mY2LCvp/OsvTICoMJV2Ywt5G7npJ89GUQE13FwlLdLgKfj5oNSynGZYWGWtxuosgPXyw4sMJgUFEvwmasmS7af7ZjYJOfr/dF3xKMgru5PbC9eWcim3kZGpYvNLTWFKqKdUETSF/rTCAJTgzyEwc+7thamn2kGIaBXT1b8Ml2cepX1MRVfNOJAcbThf+rujBoMboxFgouw5qGr8NNca+JAtm4XdZKZ3x2mmge2HceVbPyn75uRlXpZ4Ly1XSLihMHJCDbSpWnzlkgjNWSr1/fciYu+ViODpNRiauo/Nrb8+qNSZ8txVP4qP99HnjhrgGqQGdu9mwnXiMUJrVU7rmNwRBpRoXs=
 before_deploy:
-- git config --local user.name "YOUR GIT USER NAME"
-- git config --local user.email "YOUR GIT USER EMAIL"
-- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-- git tag $TRAVIS_TAG
+  - git config --local user.name "YOUR GIT USER NAME"
+  - git config --local user.email "YOUR GIT USER EMAIL"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
