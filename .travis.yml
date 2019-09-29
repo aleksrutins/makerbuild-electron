@@ -14,6 +14,7 @@ deploy:
   file:
   - dist/makerbuild-electron-1.0.0.AppImage
   - makerbuild-electron.tar.gz
+  on.tags: true
   api_key:
     secure: QC0NzLeCsBQ0VUFfVis9xQPU5fgK2F1RXw2jU9rL3UUXS0KaFG6kqH1yp/D+Uuwy7+ZoE8pj22itpOpiogk9HPC//D+4mT2YrXVz/bmvCSzQCFshnvhqyieN8Abd1aali0KWylWPTV1YyID7F2uNT9CC53NcuaDI9L/wuTvzjUZTOpO3uHifUgGjBAMEsuNVt3yqNRsZQSm0hliibCS1WCvlM8VD4qQ57dYeb3+t5S+wj8Az1STk89b3QvQpbdVBxsmC+hpeEW5LQryA8tAbuhNRorXztKB+3hCZSeHV89L7IMmAOX47HA/YTjFcaNVR6sX6pFgTdvR0H3Zn9lLzoLwePIk37nqRZcyQG8JjtFF9xu+B8/qLwbdSPTnUqPYWYZqMTBe9OAfscwz8n2+WU7RLY/QgrQy3TalHzlYwkHpovdcl7O0qFmqs/TWwMyqTyws1i9fXxyp5fFLkMMjW5KMhn1vY7bkfsFLsgdhghl/NLzrMDWRC+B3HIjmnpuvAFDdJOMz/YsnfyzDJ58ZO03UJtn8UPLVaxdZyqEtgFYVfZOWm9JE4HY3zV1CFXeMeioHWz8CAR3exyGuwVfPH2sIFWh92M/ralafShV3n+IGK+WSqzEA6G3plFRwCOTgnlsi8iFRtUxKp9E6EMnq4UUdN4aZZCSosjZs7C1hBsK4=
 before_deploy:
