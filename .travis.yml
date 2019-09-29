@@ -4,15 +4,16 @@ node_js:
 - '6'
 - '4'
 before_script:
-  - npm install
+- npm install
 script:
-  - npm run dist
-  - tar -cvf makerbuild-electron.tar .
-  - gzip makerbuild-electron.tar
+- npm run dist
+- tar -cvf makerbuild-electron.tar .
+- gzip makerbuild-electron.tar
 deploy:
   provider: releases
-  api_key:
-    secure: pT2ppvCezSC4NQQX8uvOd65ibKkJbM45CfIIGCeaqO0ZmX2qPZIUWlBKjC6xkTQEbwY6s2Wq3Qp4TZ0ZgGRpgEMJXh9lrJvYKxXYoB4sxCzPszAL1EISFTANLEL5fmA1wo/+N6XKYr7UgxTi4jDAvwElYpzolH+N2Mto1x525ESevbOKxdU65AfLIJD9RjVATx4pj16IVYFobwPXyPVDBVwfZLPNKMYQyQ8KgrtiIuKUReh3VBqpa6zvGU08P2BkE7bwtdqNXT0TorBAPzqKGJbx2dyXPSu37zkD9P5cC39xzrCavribIF2lNwfmVucxdlS6DHh07+J8RcvMT8fYtR4ru8UbTTzThcl85uka9DpcwzzKqoMKOdRyDQBvRiWJvCDfea97NOaNfKQIGhbUSI7nWxsIQJC3lhvKSmx2gqkml/+EkKbV/Or21EhFEWSCdQ2XrEunrfTe5IMU4EQx/PWXqH4Apnn3d8fdLZ+uelaszl0S1Nng/zduvfhJ+TF3qUrgsfyhIE4IJn5s1Ed/HTLWSxIi2M79uhCWdioO/J2ctIfYu9j9Uoi8GWGfGWkgfoGAaK7NxRGC4OaM3/rt74N7qkcmvE+EOdneLWX770T9dMCPcTiPx5C0Beb11g6qxG4L3qaxREuLM1VHy5BXrtFG6kx0NL9SxJ4NErc0sAs=
-  file: 
-    - dist/makerbuild-electron-1.0.0.AppImage
-    - makerbuild-electron.tar.gz
+  user: munchkinhalfling
+  file:
+  - dist/makerbuild-electron-1.0.0.AppImage
+  - makerbuild-electron.tar.gz
+  password:
+    secure: k2AEdf1cPlCcxWdOjY2+cFe/guCwANawcd3reun2wTYPZPbTISiXutW9F47aCn/xSRnph/x6pCVHQAlnA/2PG0X9i/pZkJ0TXr2AjGna/pLdctiGjU7UJTPoNZ1nyEmde1DwBVg44ZX9w8qpUr4+4B0dztOahgUJHYAlVNHDG6iPvrWpLJgC8/kf3I9O7so2o5bjghOXFPKOpk4h7DuNbK1NcgfHYpsx8qSu14kk/r6nawr6wE4MjnaSSGcYEBgij6ObnEhVm+aSluCAI93fvPJdbxBcf3XwK4hehUSpCqVrZDcZM1oqnhuxl4CsGSvzYnz6mdf/rtFKl3hOPN1OPq8xhjBN9xeDSWlq6fREJD45U9HxmH8W1DGPgUhB3Xl1NatYchYl0bshJeOMQLn2KG5YEB+wkGRGzdHrBtZ+V6Crmge8Ui/SbDusiYB1G2gUcjwfKBjXG59IbU8og94PYZfWYafmIKQFPAAKYthYtx/nowGrUGbi+oDLYGdEomhwi3Gg9U8qW1EAwaocyUqyFAqHuj0vqrULpCahcZIFUloDcfDwDkdfHtjtllSQc9eqHybAgxP9kID5kR/WYGRIIKnkk8hteyT5MeAsraL3quSOQGlSJXnYrWo10VM10GvCe66OO5fokLuoOowEMyuBH8fAqgIAHJQKg0VE1MSX2Dk=
