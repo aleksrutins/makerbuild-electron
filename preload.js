@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
     btn.innerHTML = "&times;";
     btn.onclick = window.close;
     btn.style.marginRight = "12px";
+    btn.style.outline = "none";
     document.getElementById("menubar").appendChild(btn);
     btn.style.webkitAppRegion = "no-drag";
     document.body.style.overflow = "hidden";
