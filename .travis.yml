@@ -11,15 +11,17 @@ script:
 - gzip makerbuild-electron.tar
 deploy:
   provider: releases
+  user: munchkinhalfling
   file:
   - dist/makerbuild-electron-1.0.0.AppImage
   - makerbuild-electron.tar.gz
   on.tags: true
   api_key:
     secure: QC0NzLeCsBQ0VUFfVis9xQPU5fgK2F1RXw2jU9rL3UUXS0KaFG6kqH1yp/D+Uuwy7+ZoE8pj22itpOpiogk9HPC//D+4mT2YrXVz/bmvCSzQCFshnvhqyieN8Abd1aali0KWylWPTV1YyID7F2uNT9CC53NcuaDI9L/wuTvzjUZTOpO3uHifUgGjBAMEsuNVt3yqNRsZQSm0hliibCS1WCvlM8VD4qQ57dYeb3+t5S+wj8Az1STk89b3QvQpbdVBxsmC+hpeEW5LQryA8tAbuhNRorXztKB+3hCZSeHV89L7IMmAOX47HA/YTjFcaNVR6sX6pFgTdvR0H3Zn9lLzoLwePIk37nqRZcyQG8JjtFF9xu+B8/qLwbdSPTnUqPYWYZqMTBe9OAfscwz8n2+WU7RLY/QgrQy3TalHzlYwkHpovdcl7O0qFmqs/TWwMyqTyws1i9fXxyp5fFLkMMjW5KMhn1vY7bkfsFLsgdhghl/NLzrMDWRC+B3HIjmnpuvAFDdJOMz/YsnfyzDJ58ZO03UJtn8UPLVaxdZyqEtgFYVfZOWm9JE4HY3zV1CFXeMeioHWz8CAR3exyGuwVfPH2sIFWh92M/ralafShV3n+IGK+WSqzEA6G3plFRwCOTgnlsi8iFRtUxKp9E6EMnq4UUdN4aZZCSosjZs7C1hBsK4=
+  password:
+    secure: C6r+0a1C+uY8gxCL5Ruz5MHMJDIZxl/o9Ods4w6NvNArUB5O+JqZQuQG+6SSEwgl3H94x2l2TiZe+lAuRWmYtujzIudBRxhSZ8U9cdBbBp1I73jfMZZT5WBaQ4GvORESVxv+CSb4T/zqeJUzA9Ds6O8jH59DqiN37yiE25jS5Uc3donLjufTTLlylwUzuW3WIs74p/Sn1RjxWMy2OzRq9ELuQrz3F7LbCgd5ZyQzodQ3ft7lprCeLcw7etUObx2qE6wz9w17HRJ7sQVod65qI9Fq7WRjgPk7keY8YES4Tdni/7AJXnvnl7eqT9STfXZEvapFPdmXGjnE95mY2LCvp/OsvTICoMJV2Ywt5G7npJ89GUQE13FwlLdLgKfj5oNSynGZYWGWtxuosgPXyw4sMJgUFEvwmasmS7af7ZjYJOfr/dF3xKMgru5PbC9eWcim3kZGpYvNLTWFKqKdUETSF/rTCAJTgzyEwc+7thamn2kGIaBXT1b8Ml2cepX1MRVfNOJAcbThf+rujBoMboxFgouw5qGr8NNca+JAtm4XdZKZ3x2mmge2HceVbPyn75uRlXpZ4Ly1XSLihMHJCDbSpWnzlkgjNWSr1/fciYu+ViODpNRiauo/Nrb8+qNSZ8txVP4qP99HnjhrgGqQGdu9mwnXiMUJrVU7rmNwRBpRoXs=
 before_deploy:
-  # Set up git user name and tag this commit
-  - git config --local user.name "YOUR GIT USER NAME"
-  - git config --local user.email "YOUR GIT USER EMAIL"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
+- git config --local user.name "YOUR GIT USER NAME"
+- git config --local user.email "YOUR GIT USER EMAIL"
+- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+- git tag $TRAVIS_TAG
