@@ -5,15 +5,12 @@ before_script:
 - npm install
 script:
 - npm run dist
-- tar -cvf makerbuild-electron.tar .
-- gzip makerbuild-electron.tar
 deploy:
   provider: releases
   api_key:
     secure: wCqoYsqE9Oe/V/w+zFgoVphf1Q++gXlKfBkAn9CFc+e5kltTD/4BuQgicSzzNAU3LFY1IZE1by9Znkqdf2tFLoppM//aVVS4b741+u3c05E/Mm0ktvpEmSvIgcYCsOvmPzaA5B748zT65DNmZLEgj+FkX9onPZ4Ruk2cRb1CtbYHGDD3hhQjq9QYKRitke5297D2iDsf0E5YFYHL7qih1PLpfURjjn0MgJTdEWOHARRdu/FKmKMLfyHD4dJNI+ZvlI27LKKbxdrkLAPqL42gpE/YwUw7J5YGRPMxBLobpno4ijEK3F9cU0SyHEzRUeeqAyHChCccFU0aIbrrR6pqwRqJAUbeb3JuTZrfrUTW6F3Jce1LwfCAl1g15fhE4z9aZpIQ+iopyPUnI7TmixM8982/IHUH7GaFsud9Qdh5kcO9O3uiWzs8CNfywXKXo9QPnqg790N6jJNb0gG+ReOUbXwxowJ9v0oumcklvkifE7ilQB/UqauDOrZUu71crzLFb98l7Q89OTwOlYjJ7hvh0UauSe0PWo7xQvDe3O1hiiXw/M03QB64hnsw8oEuax/icGjVAALEbNmwkaseRXfiQyOetTZkZdrds8C/1A1M/jWXaB+M1VC5/8a5+ZClQxhNy+hkZZzzGxkgUxKTuOAuBLdhPALfa6h85zCQTuGpE+8=
   file: 
     - ./dist/makerbuild-electron-1.0.0.AppImage
-    - ./makerbuild-electron.tar.gz
   on:
     repo: munchkinhalfling/makerbuild-electron
   skip_cleanup: true
