@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+deploy:
+  provider: releases
+  api_key:
+    secure: pT2ppvCezSC4NQQX8uvOd65ibKkJbM45CfIIGCeaqO0ZmX2qPZIUWlBKjC6xkTQEbwY6s2Wq3Qp4TZ0ZgGRpgEMJXh9lrJvYKxXYoB4sxCzPszAL1EISFTANLEL5fmA1wo/+N6XKYr7UgxTi4jDAvwElYpzolH+N2Mto1x525ESevbOKxdU65AfLIJD9RjVATx4pj16IVYFobwPXyPVDBVwfZLPNKMYQyQ8KgrtiIuKUReh3VBqpa6zvGU08P2BkE7bwtdqNXT0TorBAPzqKGJbx2dyXPSu37zkD9P5cC39xzrCavribIF2lNwfmVucxdlS6DHh07+J8RcvMT8fYtR4ru8UbTTzThcl85uka9DpcwzzKqoMKOdRyDQBvRiWJvCDfea97NOaNfKQIGhbUSI7nWxsIQJC3lhvKSmx2gqkml/+EkKbV/Or21EhFEWSCdQ2XrEunrfTe5IMU4EQx/PWXqH4Apnn3d8fdLZ+uelaszl0S1Nng/zduvfhJ+TF3qUrgsfyhIE4IJn5s1Ed/HTLWSxIi2M79uhCWdioO/J2ctIfYu9j9Uoi8GWGfGWkgfoGAaK7NxRGC4OaM3/rt74N7qkcmvE+EOdneLWX770T9dMCPcTiPx5C0Beb11g6qxG4L3qaxREuLM1VHy5BXrtFG6kx0NL9SxJ4NErc0sAs=
+  file: 
+    - dist/makerbuild-electron-1.0.0.AppImage
+    - makerbuild-electron.tar.gz
