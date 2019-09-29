@@ -15,4 +15,4 @@ deploy:
     repo: munchkinhalfling/makerbuild-electron
   skip_cleanup: true
   name: Travis CI Release
-  body: $COMMIT_MSG
+  body: $($COMMIT_MSG)
